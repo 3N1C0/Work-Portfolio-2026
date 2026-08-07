@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-bg: #171717;
+  --color-fg: #FFFFE3;
+  --color-accent: #AABA99;
+  --color-surface: #1c1c1c;
+}
+
+*, *::before, *::after {
+  cursor: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #171717;
+  color: #FFFFE3;
+  font-family: "Yu Gothic", YuGothic, sans-serif;
+  font-weight: 700;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: #FFFFE3;
+  color: #171717;
+}
+
+::-webkit-scrollbar {
+  width: 3px;
+}
+::-webkit-scrollbar-track {
+  background: #171717;
+}
+::-webkit-scrollbar-thumb {
+  background: #AABA99;
+  border-radius: 2px;
+}
+
+@media (hover: none) {
+  *, *::before, *::after { cursor: auto; }
+}
