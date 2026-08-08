@@ -129,7 +129,7 @@ export default function Contact() {
         className="flex justify-center mb-36"
       >
         <a
-          href="/Resume_Elias_Nicolas_Portfolio_2026.pdf"
+          href="/Resume_Elias_Nicolas_ME.pdf"
           download="Resume_Elias_Nicolas.pdf"
           className="group flex items-center gap-2.5 px-8 py-4 rounded-full font-mono text-sm font-bold transition-all duration-300 active:scale-[0.97]"
           style={{ background: ACCENT, color: '#171717' }}
