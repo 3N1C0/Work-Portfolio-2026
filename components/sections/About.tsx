@@ -1,6 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
+import Carousel from '@/components/Carousel'
 
 const stats = [
   { value: '3.8', label: 'GPA' },
@@ -13,7 +14,6 @@ const FG = '#FFFFE3'
 const FG_MUTED = 'rgba(255,255,227,0.5)'
 const FG_DIM = 'rgba(255,255,227,0.25)'
 const ACCENT = '#AABA99'
-const SURFACE = '#1c1c1c'
 const BORDER = 'rgba(255,255,227,0.07)'
 
 export default function About() {
@@ -35,13 +35,14 @@ export default function About() {
       </motion.div>
 
       <div className="grid lg:grid-cols-2 gap-20 items-start">
-        <div>
+        {/* Left: quote, stats, body text */}
+        <div className="space-y-10">
           <motion.h2
             initial={{ opacity: 0, y: 32 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
-            className="font-mono font-light italic leading-[1.15] mb-14"
+            className="font-mono font-light italic leading-[1.15]"
             style={{ fontSize: 'clamp(2rem,5vw,3.8rem)', color: FG }}
           >
             &ldquo;Maybe you can have{' '}
@@ -67,27 +68,6 @@ export default function About() {
               </motion.div>
             ))}
           </div>
-        </div>
-
-        <div className="space-y-7">
-          <motion.div
-            initial={{ opacity: 0, y: 32 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.85, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
-            className="p-[6px] rounded-[1.75rem]"
-            style={{ background: 'rgba(255,255,227,0.03)', border: `1px solid ${BORDER}` }}
-          >
-            <div
-              className="aspect-[16/9] rounded-[calc(1.75rem-6px)] flex items-center justify-center relative overflow-hidden"
-              style={{ background: SURFACE, boxShadow: 'inset 0 1px 1px rgba(255,255,227,0.04)' }}
-            >
-              <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse at 30% 40%, rgba(170,186,153,0.06), transparent 60%)' }} />
-              <span className="font-mono text-xs z-10 tracking-widest" style={{ color: FG_DIM }}>
-                [Placeholder]
-              </span>
-            </div>
-          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -110,6 +90,24 @@ export default function About() {
             </p>
           </motion.div>
         </div>
+
+        {/* Right: photo carousel */}
+        <motion.div
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.85, delay: 0.12, ease: [0.16, 1, 0.3, 1] }}
+          className="p-[6px] rounded-[1.75rem] overflow-hidden"
+          style={{ background: 'rgba(255,255,227,0.03)', border: `1px solid ${BORDER}` }}
+        >
+          <div className="rounded-[calc(1.75rem-6px)] overflow-hidden" style={{ boxShadow: 'inset 0 1px 1px rgba(255,255,227,0.04)' }}>
+            <Carousel
+              images={['/about_me/portfolio.jpg', '/about_me/portfolio_b.png', '/about_me/portfolio_c.png']}
+              gradient="rgba(170,186,153,0.06)"
+              aspectRatio="3/4"
+            />
+          </div>
+        </motion.div>
       </div>
     </section>
   )
