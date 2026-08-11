@@ -162,7 +162,7 @@ export default function Experience() {
                 <ul className="space-y-2.5">
                   {exp.bullets.map((b, j) => (
                     <li key={j} className="flex gap-3 font-mono text-sm leading-relaxed" style={{ color: FG_MUTED }}>
-                      <span className="mt-[0.35rem] flex-shrink-0 text-[7px]" style={{ color: 'rgba(170,186,153,0.5)' }}>▶</span>
+                      <span className="mt-[0.42rem] flex-shrink-0 w-[5px] h-[5px] rounded-full" style={{ background: ACCENT, flexShrink: 0 }} />
                       {b}
                     </li>
                   ))}

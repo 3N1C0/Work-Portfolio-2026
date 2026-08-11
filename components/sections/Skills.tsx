@@ -23,12 +23,12 @@ const groups = [
   {
     category: 'Data Science & ML',
     glyph: '</>',
-    skills: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Plotly', 'Jupyter'],
+    skills: ['PyTorch', 'TensorFlow', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Plotly', 'Jupyter Lab'],
   },
   {
     category: 'Tools & Platforms',
     glyph: '◻',
-    skills: ['Git / GitHub', 'Linux', 'LaTeX', 'VS Code', 'Claude Code', 'Obsidian'],
+    skills: ['Microsoft Excel', 'Git / GitHub', 'Linux', 'LaTeX', 'VS Code', 'Claude Code', 'Obsidian'],
   },
 ]
 
