@@ -7,7 +7,7 @@ const stats = [
   { value: '3.8', label: 'GPA' },
   { value: '5+', label: 'Projects' },
   { value: '2', label: 'Yrs. Exp.' },
-  { value: '$3.5k+ Raised', label: 'Club Funds' },
+  { value: '$5k+ Raised', label: 'Club Funds' },
 ]
 
 const FG = '#FFFFE3'
@@ -43,11 +43,14 @@ export default function About() {
             viewport={{ once: true }}
             transition={{ duration: 0.85, ease: [0.16, 1, 0.3, 1] }}
             className="font-mono font-light italic leading-[1.15]"
-            style={{ fontSize: 'clamp(2rem,5vw,3.8rem)', color: FG }}
+            style={{ fontSize: 'clamp(1.6rem,3.5vw,2.6rem)', color: FG }}
           >
-            &ldquo;Maybe you can have{' '}
-            <span className="not-italic font-semibold" style={{ color: ACCENT }}>it all.</span>
-            &rdquo; Entourage
+            &ldquo;Do every act of your life as though it were the{' '}
+            <span className="not-italic font-semibold" style={{ color: ACCENT }}>very last act</span>
+            {' '}of your life.&rdquo;
+            <span className="block not-italic text-base mt-4" style={{ color: FG_DIM }}>
+              &mdash; Marcus Aurelius
+            </span>
           </motion.h2>
 
           <div className="flex gap-8 md:gap-12">
@@ -78,9 +81,6 @@ export default function About() {
           >
             <p className="font-mono leading-[1.85] text-[0.88rem]" style={{ color: FG_MUTED }}>
               I&apos;m currently a student enrolled in the dual degree engineering program at the University of Redlands with a passion for building. I will be receiving a B.A. in Physics and Data Science (double major) from Redlands along with a M.S. in Mechanical Engineering from Washington University in St. Louis after everything is all said and done. I am consistently improving my CAD and FEA workflow as I continue my education, and am well versed in Python for data analytics. Recently, I have been experimenting with AI coding tools like Claude Code and Cursor to expand upon my projects software so I can focus on the physical side of things.
-            </p>
-            <p className="font-mono leading-[1.85] text-[0.88rem]" style={{ color: FG_MUTED }}>
-              I&apos;m particularly drawn to either the robotics or aerospace sector (with a mixture of both being my dream scenario), as I want to gain experience in multiple different roles to further develop my design skills and mechanical intuition.
             </p>
             <p className="font-mono leading-[1.85] text-[0.88rem]" style={{ color: FG_MUTED }}>
               I am actively seeking internship and research opportunities for the 2027 year where I can apply my technical skills and leadership experience to real-world challenges at a place looking for someone young to make an impact.
