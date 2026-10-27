@@ -7,17 +7,36 @@ const FG_MUTED = 'rgba(255,255,227,0.5)'
 const FG_DIM = 'rgba(255,255,227,0.22)'
 const ACCENT = '#AABA99'
 
-const experiences = [
+const experiences: { company: string; role: string; period: string; location: string; type: string; bullets: string[] }[] = [
+  {
+    company: 'University of Redlands',
+    role: 'Machine Learning Research Assistant',
+    period: 'Oct 2026 – Present',
+    location: 'Redlands, CA',
+    type: 'Research',
+    bullets: [
+      'Developed a RAG workflow to detect missing evidence in NASA technical documents and flag unresolved parts',
+      'Designed targeted retrieval to recover information across unsupported documents within a fixed compute budget',
+    ],
+  },
+  {
+    company: 'Maroon and Grey Student Ambassadors',
+    role: 'Student Ambassador',
+    period: 'Aug 2026 – Present',
+    location: 'Redlands, CA',
+    type: 'Leadership',
+    bullets: [],
+  },
   {
     company: 'Howmet Aerospace',
     role: 'Mechanical Engineering Intern',
-    period: 'June 2026 – Aug 2026',
+    period: 'June 2026 – Present',
     location: 'Fontana, CA',
     type: 'Internship',
     bullets: [
-      'Designed a hydraulic tool for press tooling changed to reduce the floor workers needed from 3 to 2',
-      'Drafted and procured a replacement part for the plant\'s 60 in. Ring Roller that had no documentation',
-      'Reverse-engineered 4 undocumented business assets in Inventor to be used by facilities for future repairs',
+      'Designed a hydraulic tool for the plant\'s press end cap repairs to reduce the floor workers needed from 3 to 2',
+      'Procured a replacement part of my design for the plant\'s 60 in. Ring Roller through a third-party machine shop',
+      'Reverse-engineered 10 undocumented business assets in Inventor to be used by facilities for future repairs',
       'Laid out a building relocation for the maintenance team in AutoCAD to maximize a 7000 sq. ft storage space',
     ],
   },
@@ -28,9 +47,8 @@ const experiences = [
     location: 'Redlands, CA',
     type: 'Part-time',
     bullets: [
-      'Utilizes 3D slicing software to cut down print times by 50%, leading to both filament and time saved',
-      'Instructs classes to 10+ students, teaching them how to use Virtual Reality equipment for  classroom simulations',
-      'Maintains lab equipment, troubleshooting hardware for 3D Printers, Laser Cutters, CNC Mills, and etc.',
+      'Optimizes 3D mesh geometry for successful CNC milling and 3D printing fabrication for various requests',
+      'Maintains lab equipment and troubleshoots hardware for 3D Printers, Laser Cutters, and CNC Mills',
     ],
   },
   {
@@ -46,14 +64,13 @@ const experiences = [
   },
   {
     company: 'Redlands Robotics and Drone Club',
-    role: 'President and Lead Engineer',
+    role: 'Club President',
     period: 'Sep 2025 – Present',
     location: 'Redlands, CA',
     type: 'Club Leadership',
     bullets: [
-      'Designs 3 drone frame iterations in Onshape that are tested to ensure press fit and fastener tolerances are correct',
-      'Collaborates with 8 team members to develop projects with the University of Redlands GIS Department',
-      'Directs the assembly process of an FPV drone to integrate hardware with AI and object detection capabilities',
+      'Led the CAD design of a smart GCP (Ground Control Point) to be utilized by faculty when drone mapping areas',
+      'Raised \$5k+ in funding to be utilized for projects including: FPV drones, AI smart cars, and high-powered rockets',
     ],
   },
   {
@@ -68,15 +85,12 @@ const experiences = [
     ],
   },
   {
-    company: 'SEDS (Students for Exploration and Development of Space) Redlands Chapter',
-    role: 'President',
+    company: 'SEDS (Students for the Exploration and Development of Space) Redlands Chapter',
+    role: 'Club President',
     period: 'Aug 2024 – Present',
     location: 'Redlands, CA',
     type: 'Club Leadership',
-    bullets: [
-      'Spearheads aerospace engineering projects producing validated CAD designs for rockets, rovers, and drones',
-      'Plans 5+ on-campus events including stargazing nights and engineering expos to cultivate a sense of community',
-    ],
+    bullets: [],
   },
   {
     company: 'University of Redlands',
