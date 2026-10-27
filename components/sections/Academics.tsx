@@ -24,9 +24,16 @@ const academic = {
     'Maroon and Grey Student Ambassador',
     'Redlands Robotics and Drone Club',
     'SEDS (Students for the Exploration and Development of Space) Redlands Chapter',
-    'Town & Gown Scholarship Recipient',
     'Hispanic Student Leader',
     'Spring 2026 Bulldog Trek Participant'
+  ],
+  awards: [
+    'Town & Gown Scholar',
+    'Jack L. Osborn Memorial Scholarship',
+    'Wiens Family Scholarship',
+    'SBCPOA Scholarship',
+    'HSF Scholar',
+    "Dean's List",
   ],
 }
 
@@ -153,6 +160,42 @@ export default function Academics() {
                     <span className="flex-shrink-0 w-[5px] h-[5px] rounded-full" style={{ background: ACCENT, marginTop: '0.35em' }} />
                     <span className="font-mono font-bold text-[0.8rem] leading-snug" style={{ color: FG }}>
                       {item}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Awards */}
+        <motion.div
+          initial={{ opacity: 0, y: 36 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.1 }}
+          transition={{ duration: 0.75, delay: 0.24, ease: EASE }}
+          className="md:col-span-3"
+        >
+          <div
+            className="p-[6px] rounded-[1.75rem] h-full"
+            style={{ background: 'rgba(255,255,227,0.025)', border: `1px solid ${BORDER}` }}
+          >
+            <div
+              className="rounded-[calc(1.75rem-6px)] p-6 h-full flex flex-col gap-4"
+              style={{ background: SURFACE, boxShadow: 'inset 0 1px 1px rgba(255,255,227,0.04)' }}
+            >
+              <span
+                className="inline-flex items-center rounded-full px-3 py-1 text-[9px] uppercase tracking-[0.2em] font-semibold self-start"
+                style={{ color: ACCENT, border: '1px solid rgba(170,186,153,0.22)', background: 'rgba(170,186,153,0.06)' }}
+              >
+                Awards
+              </span>
+              <ul className="grid sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-2.5">
+                {academic.awards.map((award) => (
+                  <li key={award} className="flex items-baseline gap-2.5">
+                    <span className="flex-shrink-0 w-[5px] h-[5px] rounded-full" style={{ background: ACCENT, marginTop: '0.35em' }} />
+                    <span className="font-mono font-bold text-[0.8rem] leading-snug" style={{ color: FG }}>
+                      {award}
                     </span>
                   </li>
                 ))}
